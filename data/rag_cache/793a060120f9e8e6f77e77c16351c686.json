@@ -1,0 +1,24 @@
+[
+  {
+    "text": "HORARIOS DE ATENCIÓN UNIVERSIDAD UDIT\n\nHORARIOS ADMINISTRATIVOS:\n- Lunes a Viernes: 8:00 AM - 5:00 PM\n- Sábados: 9:00 AM - 1:00 PM\n- Domingos: Cerrado\n\nHORARIOS ACADÉMICOS:\n- Clases: Lunes a Viernes 8:00 AM - 8:00 PM\n- Biblioteca: Lunes a Viernes 8:00 AM - 10:00 PM\n- Laboratorios: Lunes a Viernes 8:00 AM - 6:00 PM\n\nSERVICIOS ESPECIALES:\n- Secretaría Académica: 8:00 AM - 6:00 PM\n- Servicios Estudiantiles: 9:00 AM - 5:00 PM\n- Departamento de Admisiones: 8:00 AM - 5:00 PM\n- Tesorería: 8:00 AM - 4:00 PM\n\nATENCIÓN AL PÚBLICO:\n- Información General: 8:00 AM - 5:00 PM\n- Consultas por Teléfono: 8:00 AM - 5:00 PM\n- Correo Electrónico: 24/7 (respuesta en horario laboral)\n\nPERÍODOS ESPECIALES:\n- Período de Matrícula: Horario extendido 8:00 AM - 7:00 PM\n- Exámenes: Horario extendido 7:00 AM - 9:00 PM\n- Vacaciones: Horario reducido 9:00 AM - 2:00 PM\n\nNOTAS IMPORTANTES:\n- Los horarios pueden variar durante períodos especiales\n- Se recomienda confirmar horarios específicos por teléfono",
+    "start_char": 0,
+    "end_char": 986,
+    "length": 986,
+    "chunk_id": 0,
+    "source_file": "docs/Horarios_UDIT.txt",
+    "file_type": "txt",
+    "file_hash": "793a060120f9e8e6f77e77c16351c686",
+    "processed_at": "2025-06-26T15:53:48.551815"
+  },
+  {
+    "text": "AM - 9:00 PM\n- Vacaciones: Horario reducido 9:00 AM - 2:00 PM\n\nNOTAS IMPORTANTES:\n- Los horarios pueden variar durante períodos especiales\n- Se recomienda confirmar horarios específicos por teléfono\n- Para trámites urgentes, contactar directamente al departamento correspondiente",
+    "start_char": 786,
+    "end_char": 1786,
+    "length": 281,
+    "chunk_id": 1,
+    "source_file": "docs/Horarios_UDIT.txt",
+    "file_type": "txt",
+    "file_hash": "793a060120f9e8e6f77e77c16351c686",
+    "processed_at": "2025-06-26T15:53:48.551815"
+  }
+]

@@ -1,0 +1,45 @@
+# =============================================
+# UDI RAG - Requisitos del Sistema
+# =============================================
+
+# NOTAS DE INSTALACIÓN:
+# 1. Se requiere CUDA 12.1 y cuDNN compatible para aceleración GPU
+# 2. Para sistemas sin GPU, instalar las versiones CPU de PyTorch
+# 3. Faster-Whisper es el motor principal de transcripción (más rápido y estable)
+
+# ============== DEPENDENCIAS BÁSICAS ==============
+numpy>=1.24.0,<2.0.0  # Compatible con PyTorch 2.1.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+rich>=13.0.0
+tiktoken>=0.5.0
+
+# ============== PROCESAMIENTO DE AUDIO ==============
+pyaudio>=0.2.13
+sounddevice>=0.4.6
+SpeechRecognition>=3.10.0  # Para reconocimiento de palabras clave
+
+# ============== WAKE WORD - TENSORFLOW ==============
+tensorflow>=2.15.0  # Para el modelo de wake word personalizado
+librosa>=0.10.0     # Para extracción de características MFCC
+scikit-learn>=1.3.0 # Para normalización de características
+
+# ============== PYTORCH CON SOPORTE CUDA ==============
+# Para GPU NVIDIA con CUDA 11.8 (versión estable para Windows)
+torch==2.1.0+cu118
+torchvision==0.16.0+cu118
+torchaudio==2.1.0+cu118
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+# ============== TRANSCRIPCIÓN DE AUDIO ==============
+# Faster-Whisper (MOTOR PRINCIPAL - más rápido y estable)
+faster-whisper>=1.1.0
+
+# ============== RAG ==============
+faiss-cpu>=1.7.4  # Usar faiss-gpu para soporte GPU
+langchain>=0.1.0
+chromadb>=0.4.0
+
+# ============== OTRAS DEPENDENCIAS ==============
+openai>=1.0.0  # Para integración con modelos de OpenAI
+

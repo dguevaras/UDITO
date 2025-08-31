@@ -1,0 +1,20 @@
+{
+    "system": {
+        "log_level": "DEBUG",
+        "temp_dir": "./temp"
+    },
+    "voice": {
+        "model": "base",
+        "language": "es"
+    },
+    "audio": {
+        "sample_rate": 16000,
+        "chunk_size": 2048,
+        "buffer_seconds": 1,
+        "silence_threshold": 200,
+        "noise_reduction": true,
+        "transcription_timeout": 3,
+        "max_recording_seconds": 5,
+        "input_device": 1
+    }
+}

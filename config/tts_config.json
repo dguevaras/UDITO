@@ -1,0 +1,11 @@
+{
+  "voice_rate": 150,
+  "voice_volume": 0.9,
+  "voice_id": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_ES-MX_SABINA_11.0",
+  "assistant_name": "UDI",
+  "greeting": "Hola, soy UDI, tu asistente universitario. ¿En qué puedo ayudarte?",
+  "farewell": "Gracias por usar UDI. ¡Que tengas un buen día!",
+  "thinking": "Déjame buscar esa información...",
+  "not_found": "Lo siento, no encontré información sobre eso.",
+  "error": "Tuve un problema al procesar tu consulta."
+}
