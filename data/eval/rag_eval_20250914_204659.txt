@@ -1,0 +1,65 @@
+Evaluación RAG (10 preguntas)
+============================================================
+
+Contexto índice:
+{
+  "total_chunks": 91,
+  "categories": {
+    "university_policies": 6,
+    "academic_regulations": 50,
+    "general_conditions": 33,
+    "university_schedules": 2
+  },
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+}
+
+[1] PREGUNTA: ¿Cuáles son las políticas de calidad y medio ambiente de la UDIT?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       sobre las políticas de calidad y medio ambiente de la UDIT, por lo tanto, no puedo responder esta pregunta.
+
+[2] PREGUNTA: ¿Qué establece la normativa de acceso y admisión?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       cceso, procedimiento de admisión y posterior matriculación del curso académico de 2024/2025.
+
+[3] PREGUNTA: ¿Qué es la normativa RAC y a qué aplica?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       normativa RAC, por lo tanto, no puedo responder esta pregunta.
+
+[4] PREGUNTA: ¿Cuáles son las condiciones generales del curso 2024-2025?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       sobre el curso 2024-2025, por lo tanto, no puedo responder esta pregunta.
+
+[5] PREGUNTA: ¿Cuándo abre y cierra la universidad?
+     CLASIF: university (conf: 0.75) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+        de 8:00 AM a 5:00 PM, y los horarios de atención son de 9:00 AM a 2:00 PM.
+
+[6] PREGUNTA: ¿Cuál es el horario de la secretaría académica?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       el horario de atención es de 8:00 AM a 6:00 PM, los lunes a viernes.
+
+[7] PREGUNTA: ¿Qué requisitos existen para la extinción de titulaciones oficiales?
+     CLASIF: university (conf: 0.75) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       iones oficiales son mencionados en el documento 1 (Regulaciones Académicas), páginas 1 y 2.
+
+[8] PREGUNTA: ¿Qué documentación se exige para la admisión?
+     CLASIF: university (conf: 0.75) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       admisión, ya que la admisión es un proceso individual y no requiere documentación formal.
+
+[9] PREGUNTA: ¿Qué servicios están disponibles y cuáles son sus horarios?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       e se enumeran en el documento 1, incluyendo los horarios de atención. Para obtener información más específica sobre los horarios y servicios, consulte el documento 2 o contacte al departamento correspondiente.
+
+[10] PREGUNTA: ¿Existen horarios especiales durante el periodo de matrícula?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       eriodo de matrícula. Para obtener información sobre horarios específicos, es recomendable consultar los documentos 1 y 2 o contactar directamente al departamento correspondiente.
+

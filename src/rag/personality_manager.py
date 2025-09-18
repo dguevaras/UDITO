@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Gestor de Personalidad para UDI
+Gestor de Personalidad para UDIT
 Maneja respuestas básicas, personalidad y clasificación de preguntas
 """
 

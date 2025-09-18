@@ -1,35 +1,37 @@
 {
-    "wake_word": {
-        "name": "UDITO",
-        "confidence_threshold": 0.8,
-        "sample_rate": 16000,
-        "chunk_duration": 3,
-        "channels": 1,
-        "format": "float32"
-    },
-    "model": {
-        "path": "WakeWordProject/models",
-        "model_file": "udito_model_simple.h5",
-        "scaler_file": "feature_scaler_simple.pkl",
-        "target_length": 29,
-        "n_mfcc": 13,
-        "hop_length": 512
-    },
-    "audio": {
-        "input_device": "default",
-        "output_device": "default",
-        "chunk_size": 1024,
-        "exception_on_overflow": false
-    },
-    "detection": {
-        "continuous_listening": true,
-        "pause_between_detections": 0.1,
-        "max_continuous_detections": 5,
-        "cooldown_period": 2.0
-    },
-    "logging": {
-        "level": "INFO",
-        "show_confidence": true,
-        "log_detections": true
-    }
+  "wake_word": {
+    "name": "UDITO"
+  },
+  "model": {
+    "framework": "tflite",
+    "path": "WakeWord-project/micro_model.tflite"
+  },
+  "audio": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "dtype": "float32"
+  },
+  "features": {
+    "type": "mfcc",
+    "n_mfcc": 13,
+    "frames": 100,
+    "frame_length_ms": 25,
+    "frame_step_ms": 10
+  },
+  "processing": {
+    "block_duration_sec": 1.0,
+    "chunk_ms": 80,
+    "calibrate_secs": 3.0
+  },
+  "detection": {
+    "threshold_voice": 0.0002,
+    "wakeword_threshold": 0.49,
+    "sensitivity": 0.6,
+    "hits_required": 2,
+    "cool_down_sec": 3.0
+  },
+  "logging": {
+    "level": "INFO",
+    "show_probabilities": true
+  }
 }

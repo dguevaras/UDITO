@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Gestor de Respuestas Básicas para UDI
+Gestor de Respuestas Básicas para UDIT
 Maneja respuestas predefinidas para preguntas comunes
 """
 

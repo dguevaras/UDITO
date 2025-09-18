@@ -1,0 +1,72 @@
+Evaluación RAG (10 preguntas)
+============================================================
+
+Contexto índice:
+{
+  "total_chunks": 91,
+  "categories": {
+    "university_policies": 6,
+    "academic_regulations": 50,
+    "general_conditions": 33,
+    "university_schedules": 2
+  },
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+}
+
+[1] PREGUNTA: ¿Cuáles son las políticas de calidad y medio ambiente de la UDIT?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       Las políticas de calidad y medio ambiente de la UDIT están definidas en el documento 2 (Políticas Universitarias).
+
+[2] PREGUNTA: ¿Qué establece la normativa de acceso y admisión?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       La normativa establece que los programas de Grado y Máster de la Universidad de Diseño, Innovación y Tecnología (UDIT) son escluidos de la aplicación de la normativa de acceso y admisión.
+
+[3] PREGUNTA: ¿Qué es la normativa RAC y a qué aplica?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       No encontrado en documentos. La normativa RAC no está mencionada en el documento.
+
+[4] PREGUNTA: ¿Cuáles son las condiciones generales del curso 2024-2025?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       Las condiciones generales del curso 2024-2025 no están descritas en los documentos. Por lo tanto, no puedo rispondere esta pregunta.
+
+[5] PREGUNTA: ¿Cuándo abre y cierra la universidad?
+     CLASIF: university (conf: 0.75) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       La universidad está abierta de lunes a viernes de 8:00 AM a 5:00 PM.
+
+[6] PREGUNTA: ¿Cuál es el horario de la secretaría académica?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       El horario de la secretaría académica es 8:00 AM - 6:00 PM.
+       
+       No se encuentra la información sobre el horario de la secretaría académica en los documentos.
+
+[7] PREGUNTA: ¿Qué requisitos existen para la extinción de titulaciones oficiales?
+     CLASIF: university (conf: 0.75) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       Los requisitos para la extinción de titulaciones oficiales son que el plan de estudios debe ser aprobada por el Órgano de Gobierno establecido al efecto, y los planes de estudio oficiales se extinguirán curso por curso, salvo las excepciones aprobadas por el Órgano de Gobierno correspondiente.
+
+[8] PREGUNTA: ¿Qué documentación se exige para la admisión?
+     CLASIF: university (conf: 0.75) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       El documento 1 (Regulaciones Académicas) se exige para la admisión.
+
+[9] PREGUNTA: ¿Qué servicios están disponibles y cuáles son sus horarios?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       Los servicios disponibles son los siguientes:
+       
+       - Secretaría Académica: 8:00 AM - 6:00 PM
+       - Servicios Estudiantiles: 9:00 AM - 5:00 PM
+       - Departamento de Admisiones: 8:00 AM - 5:00 PM
+       - Tesorería: 8:00 AM - 4:00 PM
+
+[10] PREGUNTA: ¿Existen horarios especiales durante el periodo de matrícula?
+     CLASIF: university (conf: 1.00) | fuente: rag | llm: True | hits: 10
+     RESPUESTA:
+       Sí, los horarios especiales durante el periodo de matrícula son de 8:00 AM a 7:00 PM.
+

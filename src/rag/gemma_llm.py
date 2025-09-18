@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Gemma 2B LLM Integration para UDI
+Gemma 2B LLM Integration para UDIT
 Proporciona capacidades de generación de lenguaje natural
 """
 
@@ -126,9 +126,14 @@ class GemmaLLM:
                     early_stopping=True  # Parar cuando sea necesario
                 )
             
-            # Decodificar respuesta
-            response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-            response = response[len(prompt):].strip()
+            # Decodificar SOLO los tokens nuevos para evitar truncados/corrupción
+            try:
+                input_len = inputs["input_ids"].shape[1]
+                generated_ids = outputs[0][input_len:]
+                response = self.tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
+            except Exception:
+                # Fallback seguro
+                response = self.tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
             
             # OPTIMIZACIÓN: Cachear respuesta
             if not hasattr(self, 'response_cache'):
@@ -144,17 +149,17 @@ class GemmaLLM:
     
     def _build_optimized_prompt(self, query: str, context: str) -> str:
         """Construye prompt optimizado para velocidad"""
-        # OPTIMIZACIÓN: Prompt más corto y directo
-        prompt = f"""<start_of_turn>user
-Eres UDI, asistente universitario. Responde de forma natural y concisa.
-
-DOCUMENTOS: {context[:500]}  # Limitar contexto
-
-PREGUNTA: {query}
-
-Respuesta breve y útil:<end_of_turn>
-<start_of_turn>model
-"""
+        # Instrucciones: responder SOLO con base en DOCUMENTOS. Si no está, indicarlo explícitamente.
+        safe_context = context[:1200]
+        prompt = (
+            f"<start_of_turn>user\n"
+            f"Eres UDI, asistente universitario. Responde de forma natural, concisa (1–3 líneas) y basándote \n"
+            f"exclusivamente en la información de DOCUMENTOS. Si la información no está en DOCUMENTOS, responde \n"
+            f"exactamente: 'No encontrado en documentos.' No inventes horarios ni normas que no aparezcan.\n\n"
+            f"DOCUMENTOS:\n{safe_context}\n\n"
+            f"PREGUNTA: {query}\n\n"
+            f"Respuesta:\n<end_of_turn>\n<start_of_turn>model\n"
+        )
         return prompt
     
     def get_model_info(self) -> dict:
